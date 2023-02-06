@@ -17,10 +17,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- *
- * @author THAYCACAC
- */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -28,8 +25,8 @@ public class Main {
         try {
             int countLine = Manager.countLine();
             int count = 1;
-            br = new BufferedReader(new FileReader(new File("input.txt")));
-            PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("output.txt", true)));
+            br = new BufferedReader(new FileReader(new File("/Users/tramy/Documents/Learning Uni/Semester 3/LAB211/LAB/WEEK 4/NormalizeText/src/test.txt")));
+            PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("/Users/tramy/Desktop/output.txt", true)));
             String line;
             //write until end file
             while ((line = br.readLine()) != null) {
