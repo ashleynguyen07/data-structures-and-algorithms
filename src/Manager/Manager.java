@@ -20,6 +20,7 @@ public class Manager {
 
     //show menu
     public static int menu() {
+        System.out.println("=========== WORKER MANAGEMENT ===========");
         System.out.println("1. Add worker.");
         System.out.println("2. Increase salary for worker.");
         System.out.println("3. Decrease for worker");
@@ -32,12 +33,9 @@ public class Manager {
 
     //allow user add worker
     public static void addWorker(ArrayList<Worker> lw) {
+        System.out.println("=========== ADD WORKER ===========");
         System.out.print("Enter code: ");
         String id = Validate.checkInputString();
-//        if (!Validate.checkIdExist(lw, id)) {
-//            System.err.println("Code(id) must be existed in DB.");
-//            return;
-//        }
         System.out.print("Enter name: ");
         String name = Validate.checkInputString();
         System.out.print("Enter age: ");
@@ -56,6 +54,7 @@ public class Manager {
 
     //allow user increase salary for user
     public static void changeSalary(ArrayList<Worker> lw, ArrayList<History> lh, int status) {
+        System.out.println("=========== UP/DOWN SALARY ===========");
         if (lw.isEmpty()) {
             System.err.println("List empty.");
             return;
@@ -109,6 +108,7 @@ public class Manager {
 
     //allow user print history
     public static void printListHistory(ArrayList<History> lh) {
+        System.out.println("=========== DISPLAY INFORMATION SALARY ===========");
         if (lh.isEmpty()) {
             System.err.println("List empty.");
             return;
