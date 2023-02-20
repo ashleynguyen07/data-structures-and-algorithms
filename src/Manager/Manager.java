@@ -113,8 +113,8 @@ public class Manager {
             System.err.println("List empty.");
             return;
         }
-        System.out.printf("%-10s%-15s%-5s%-10s%-10s%-20s\n%s", "Code", "Name", "Age",
-                "Salary", "Status", "Date", "W");
+        System.out.printf("%-10s%-15s%-5s%-10s%-10s%-20s\n", "Code", "Name", "Age",
+                "Salary", "Status", "Date");
         Collections.sort(lh);
         //print history from first to last list
         for (History history : lh) {
@@ -141,7 +141,7 @@ public class Manager {
 
     //print history
     public static void printHistory(History history) {
-        System.out.printf("%-10s%-15s%-5s%-10s%-10s%-20s\n", history.getId(),
+        System.out.printf("%s%-10s%-15s%-5s%-10s%-10s%-20s\n","W", history.getId(),
                 history.getName(), history.getAge(), history.getSalary(),
                 history.getStatus(), history.getDate());
     }

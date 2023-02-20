@@ -16,6 +16,11 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Worker> lw = new ArrayList<>();
+        Worker w1 = new Worker("1", "my", 19, 1000, "home");
+        Worker w2 = new Worker("4", "bao", 19, 500, "home");
+        lw.add(w1);
+        lw.add(w2);
+
         ArrayList<History> lh = new ArrayList<>();
         //loop until user want to exit
         while (true) {
