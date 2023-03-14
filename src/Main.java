@@ -15,7 +15,5 @@ public class Main {
     public static void main(String[] args) {
         Validation valid = new Validation();
         valid.display();
-        
-        
     }
 }
