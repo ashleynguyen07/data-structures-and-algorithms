@@ -26,15 +26,38 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("======== Management Person programer ========");
 
-        int n = Validate.checkInputNumberStudent();
+        int n = Validation.checkInputNumberStudent();
         Person[] persons = new Person[n];
         for (int i = 0; i < persons.length; i++) {
-            persons[i] = Validate.inputPersonInfo();
+            persons[i] = Validation.inputPersonInfo();
         }
         PersonWrapper[] listPersonWrapper = new PersonWrapper[persons.length];
-        Validate.sortBySalary(persons, listPersonWrapper);
+        sortBySalary(persons, listPersonWrapper);
         for (int i = 0; i < persons.length; i++) {
             listPersonWrapper[i].p.displayPersonInfo();
         }
+    }
+    public static void swap(PersonWrapper person1, PersonWrapper person2) {
+        Person temp = person1.p;
+        person1.p = person2.p;
+        person2.p = temp;
+    }
+    public static void sortBySalary(Person[] persons, PersonWrapper[] listPersonWrapper) {
+        int n = persons.length;
+
+        for (int i = 0; i < persons.length; i++) {
+            listPersonWrapper[i] = new PersonWrapper(persons[i]);
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (listPersonWrapper[i].p.salary > listPersonWrapper[j].p.salary) {
+                    swap(listPersonWrapper[i], listPersonWrapper[j]);
+                }
+            }
+        }
+        System.err.println("Sort sussess.");
+        System.out.println("\n");
+
+        return;
     }
 }
